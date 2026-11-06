@@ -1,19 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- <h1>Number Input</h1>
+
     
-    <h1>Number Input</h1>
 
-    <input type="text" id="inputField" placeholder="Enter Number...">
-    <button id="submitButton" onclick="submitNumber()">Submit</button>
+    <div class="output" id="output">
+      <h3 id="arrayDisplayField"></h3>
+
+      <input type="text" id="inputField" placeholder="Enter Number..." />
+
+      <button id="pushNumber" onclick="pushNum()">Add</button>
+
+      <button onclick="popNum()">Pop</button>
+      <button onclick="unshiftNum()">Unshift</button>
+      <button onclick="shiftNum()">Shift</button>
+      <button onclick="reverseNum()">Reverse</button>
+      <button onclick="sortNum()">Sort</button>
+      <button onclick="indexNum()">Index Number</button>
+    </div> -->
+
+  
+    <input type="button" id="inputField" value="Click Me" onclick="showAlert()" />
 
 
+    <!-- chart.js -->
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+<!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
